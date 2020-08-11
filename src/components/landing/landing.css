@@ -1,0 +1,4 @@
+.landing {
+  background-color: var(--clr-lightBg);
+  transition: all 1s;
+}

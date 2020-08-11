@@ -1,0 +1,19 @@
+.cta {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 10em 0;
+}
+
+.cta-title {
+  margin: 0;
+  line-height: 1;
+}
+
+.cta-p {
+  font-size: var(--fs-h4);
+  max-width: 47em;
+  margin: 5rem 0;
+}

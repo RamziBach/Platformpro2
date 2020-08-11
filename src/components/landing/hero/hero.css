@@ -1,0 +1,18 @@
+.hero-parent {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 6rem;
+}
+
+.hero-svg {
+  width: 30em;
+  /* filter: invert(1) saturate(0); */
+}
+
+@media (max-width: 1150px) {
+  .hero-parent {
+    flex-direction: column;
+    justify-content: center;
+  }
+}

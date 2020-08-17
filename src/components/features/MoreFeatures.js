@@ -1,19 +1,8 @@
-import React, { useContext } from 'react';
-
-import { themeContext } from '../context/ThemeContextProvider';
+import React from 'react';
 
 const MoreFeatures = () => {
-  const { darkMode } = useContext(themeContext);
-
   return (
-    <div
-      className="information"
-      style={{
-        borderBottom: darkMode
-          ? '1px solid rgba(238, 242, 246, 0.2)'
-          : '1px solid #d0d4d9',
-      }}
-    >
+    <div className="information">
       <div className="sm-container sm_section-spacing">
         <h2 className="information-title sm_section-spacing">And more...</h2>
         <div className="information-parent">

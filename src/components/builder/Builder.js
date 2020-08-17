@@ -1,34 +1,17 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Section } from 'react-scroll-section';
-
-import { themeContext } from '../context/ThemeContextProvider';
 
 import builder1 from '../../images/builder.jpg';
 
 const Builder = () => {
-  const { darkMode } = useContext(themeContext);
-
   return (
     <Section id="builder">
-      <div
-        className="builder sm_section-spacing"
-        style={{
-          backgroundColor: darkMode ? '#233343' : '#dee6ed',
-          color: darkMode ? '#eef2f6' : '#101820',
-        }}
-      >
+      <div className="builder sm_section-spacing">
         <div className="md-container">
           <h2 className="builder-title sm_section-spacing">
             Build your website
           </h2>
-          <div
-            className="builder1-parent"
-            style={{
-              borderBottom: darkMode
-                ? '1px solid #eef2f6'
-                : '1px solid #101820',
-            }}
-          >
+          <div className="builder1-parent">
             <div className="builder1-child_container sticky">
               <div className="builder1-child_container1">
                 <h3 id="builder1-h3_first" className="builder1-h3">
@@ -64,24 +47,13 @@ const Builder = () => {
             </div>
             <div className="builder-img_container">
               <div className="builder-spacing">
-                <img
-                  style={{
-                    filter: darkMode ? 'invert(1) saturate(0)' : 'none',
-                  }}
-                  className="builder1"
-                  src={builder1}
-                  alt="builder one"
-                />
+                <img className="builder1" src={builder1} alt="builder one" />
+              </div>
+              <div className="builder-spacing">
+                <img className="builder2" src={builder1} alt="builder one" />
               </div>
               <div>
-                <img
-                  style={{
-                    filter: darkMode ? 'invert(1) saturate(0)' : 'none',
-                  }}
-                  className="builder2"
-                  src={builder1}
-                  alt="builder one"
-                />
+                <img className="builder3" src={builder1} alt="builder one" />
               </div>
               {/* <div className="builder-spacing">
               <img className="builder1" src={builder1} alt="builder one" />

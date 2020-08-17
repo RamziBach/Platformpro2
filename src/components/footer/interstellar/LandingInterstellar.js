@@ -1,6 +1,4 @@
-import React, { useContext } from 'react';
-
-import { themeContext } from '../../context/ThemeContextProvider';
+import React from 'react';
 
 import circle1 from '../../../images/whiteInterstellar/circle-1.svg';
 import circle2 from '../../../images/whiteInterstellar/circle-2.svg';
@@ -14,18 +12,9 @@ import circle9 from '../../../images/whiteInterstellar/circle-9.svg';
 import circle10 from '../../../images/whiteInterstellar/circle-10.svg';
 
 const LandingInterstellar = () => {
-  const { darkMode } = useContext(themeContext);
-
   return (
     <>
-      <div
-        className="landingInterstaller-hero"
-        style={{
-          borderTop: darkMode
-            ? '1px solid rgba(238, 242, 246, 0.2)'
-            : '#eef2f6',
-        }}
-      >
+      <div className="landingInterstaller-hero">
         <div className="landingInterstellar-child">
           <div className="circles">
             <div className="circles-container">

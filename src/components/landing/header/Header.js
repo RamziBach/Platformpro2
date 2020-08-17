@@ -1,57 +1,38 @@
-import React, { useEffect, useRef, useContext, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import Headroom from 'react-headroom';
 import { SectionLink, Section } from 'react-scroll-section';
 
-import { themeContext } from '../../context/ThemeContextProvider';
 import NavMenu from './NavMenu';
 
 import darkLogo from '../../../images/logo-dark.svg';
 import lightLogo from '../../../images/light-logo_sm.svg';
 
 const Header = () => {
-  const { darkMode } = useContext(themeContext);
   const [open, setOpen] = useState(false);
   const headerRef = useRef(null);
 
-  const scrollFunction = () => {
-    if (
-      document.body.scrollTop > 120 ||
-      document.documentElement.scrollTop > 120
-    ) {
-      if (!darkMode) {
-        headerRef.current.style.backgroundColor = '#eef2f6';
-        headerRef.current.style.borderBottom = '1px solid #d0d4d9';
-      } else {
-        headerRef.current.style.backgroundColor = '#233343';
-        headerRef.current.style.borderBottom =
-          '1px solid rgba(238, 242, 246, 0.2)';
-      }
-    } else {
-      if (!darkMode) {
-        headerRef.current.style.backgroundColor = '#fbe0ca';
-        headerRef.current.style.borderBottom = 'none';
-      } else {
-        headerRef.current.style.backgroundColor = '#233343';
-        headerRef.current.style.borderBottom = 'none';
-      }
-    }
-  };
+  // const scrollFunction = () => {
+  //   if (
+  //     document.body.scrollTop > 120 ||
+  //     document.documentElement.scrollTop > 120
+  //   ) {
+  //     headerRef.current.style.backgroundColor = '#eef2f6';
+  //     headerRef.current.style.borderBottom = '1px solid #d0d4d9';
+  //   } else {
+  //     headerRef.current.style.backgroundColor = '#1a2633';
+  //     headerRef.current.style.borderBottom = 'none';
+  //   }
+  // };
 
-  useEffect(() => {
-    window.onscroll = () => scrollFunction();
-  }, [darkMode]);
+  // useEffect(() => {
+  //   window.onscroll = () => scrollFunction();
+  // }, []);
 
   return (
     <>
       <Section id="home">
         <Headroom className="smMD_section-spacing">
-          <header
-            ref={headerRef}
-            style={{
-              backgroundColor: darkMode ? '#233343' : '#fbe0ca',
-              color: darkMode ? '#eef2f6' : '#101820',
-            }}
-          >
+          <header ref={headerRef}>
             <div className="lg-container">
               <div className="header-parent">
                 <div id="desktop-nav1" className="header-child1">
@@ -64,7 +45,7 @@ const Header = () => {
                       >
                         <img
                           className="header-logo smLogo"
-                          src={darkMode ? lightLogo : darkLogo}
+                          src={lightLogo}
                           alt="logo"
                         />
                         <h3 className="header-title">platformpro</h3>
@@ -79,7 +60,6 @@ const Header = () => {
                             className="menu-btn"
                             onClick={onClick}
                             selected={isSelected}
-                            style={{ color: darkMode ? '#eef2f6' : '#101820' }}
                           >
                             about
                           </button>
@@ -93,7 +73,6 @@ const Header = () => {
                             className="menu-btn"
                             onClick={onClick}
                             selected={isSelected}
-                            style={{ color: darkMode ? '#eef2f6' : '#101820' }}
                           >
                             builder
                           </button>
@@ -107,7 +86,6 @@ const Header = () => {
                             className="menu-btn"
                             onClick={onClick}
                             selected={isSelected}
-                            style={{ color: darkMode ? '#eef2f6' : '#101820' }}
                           >
                             features
                           </button>
@@ -115,37 +93,17 @@ const Header = () => {
                       </SectionLink>
                     </li>
                     <li>
-                      <button
-                        className="menu-btn"
-                        style={{ color: darkMode ? '#eef2f6' : '#101820' }}
-                      >
-                        blog
-                      </button>
+                      <button className="menu-btn">blog</button>
                     </li>
                     <li>
-                      <button
-                        className="menu-btn"
-                        style={{ color: darkMode ? '#eef2f6' : '#101820' }}
-                      >
-                        brand
-                      </button>
+                      <button className="menu-btn">brand</button>
                     </li>
                   </ul>
                 </div>
                 <div id="desktop-nav2" className="header-child2">
                   <ul className="header-ul">
                     <li>
-                      <button
-                        className="header-btn_border"
-                        style={{
-                          color: darkMode ? '#eef2f6' : '#101820',
-                          border: darkMode
-                            ? '1px solid rgba(238, 242, 246, 0.2)'
-                            : '1px solid rgba(16, 24, 32, 0.2)',
-                        }}
-                      >
-                        log in
-                      </button>
+                      <button className="header-btn_border">log in</button>
                     </li>
                     <li>
                       <button className="header-btn_bg">sign up</button>
@@ -163,7 +121,7 @@ const Header = () => {
                       >
                         <img
                           className="header-logo smLogo"
-                          src={darkMode ? lightLogo : darkLogo}
+                          src={darkLogo}
                           alt="logo"
                         />
                         <h3 className="header-title">platformpro</h3>

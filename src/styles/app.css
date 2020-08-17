@@ -17,7 +17,7 @@
   --clr-light: #eef2f6;
   --clr-accent: #007c89;
   --clr-darkAccent: #004e56;
-  --clr-lightBg: #fbe0ca;
+  --clr-lightBg: #223344;
   --clr-grayBg: #dee6ed;
   --clr-accentBg: #cad9fb;
 
@@ -204,7 +204,7 @@ p {
   font-size: var(--fs-body);
   font-weight: 700;
   text-decoration: none;
-  color: var(--clr-dark);
+  color: var(--clr-light);
   background-color: transparent;
   transition: all 0.3s;
 }

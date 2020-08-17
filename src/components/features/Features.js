@@ -1,19 +1,17 @@
-import React, { useState, useContext } from 'react';
+import React, { useState } from 'react';
 
 import AnimatedCard from '../AnimatedCard';
 import { Section } from 'react-scroll-section';
-
-import { themeContext } from '../context/ThemeContextProvider';
 
 import browser from '../../images/browser.svg';
 import seo from '../../images/seo.svg';
 import rocket from '../../images/rocket.svg';
 import writer from '../../images/writer.svg';
 
-const orange = '#fbe0ca';
-const red = '#fbcaca';
-const blue = '#cad9fb';
-const green = '#ccfbca';
+const orange = '#ff921f';
+const red = '#ff615d';
+const blue = '#059bc4';
+const green = '#00994d';
 
 const data = {
   featureOne: {
@@ -39,7 +37,6 @@ const data = {
 };
 
 const Features = () => {
-  const { darkMode } = useContext(themeContext);
   const [bg, setBg] = useState(orange);
   const [isOrangeArrow, setIsOrangeArrow] = useState(true);
   const [isBleuArrow, setIsBlueArrow] = useState(false);
@@ -61,7 +58,6 @@ const Features = () => {
               <li className="features-li">
                 <AnimatedCard weight={3} clickable={false}>
                   <div
-                    style={{ backgroundColor: darkMode ? '#233343' : orange }}
                     className="features-svg_container bg-orange"
                     onMouseEnter={() => {
                       setBg(orange);
@@ -73,14 +69,7 @@ const Features = () => {
                       setText(data.featureOne.text);
                     }}
                   >
-                    <img
-                      style={{
-                        filter: darkMode ? 'invert(1) saturate(0)' : 'none',
-                      }}
-                      className="features-svg"
-                      src={writer}
-                      alt="browser"
-                    />
+                    <img className="features-svg" src={writer} alt="browser" />
                   </div>
                 </AnimatedCard>
                 <h4 className="features-h4">Beautiful</h4>
@@ -88,7 +77,6 @@ const Features = () => {
               <li className="features-li">
                 <AnimatedCard weight={3} clickable={false}>
                   <div
-                    style={{ backgroundColor: darkMode ? '#233343' : blue }}
                     className="features-svg_container bg-blue"
                     onMouseEnter={() => {
                       setBg(blue);
@@ -100,14 +88,7 @@ const Features = () => {
                       setText(data.featureTwo.text);
                     }}
                   >
-                    <img
-                      style={{
-                        filter: darkMode ? 'invert(1) saturate(0)' : 'none',
-                      }}
-                      className="features-svg"
-                      src={browser}
-                      alt="browser"
-                    />
+                    <img className="features-svg" src={browser} alt="browser" />
                   </div>
                 </AnimatedCard>
                 <h4 className="features-h4">Responsive</h4>
@@ -115,7 +96,6 @@ const Features = () => {
               <li className="features-li">
                 <AnimatedCard weight={3} clickable={false}>
                   <div
-                    style={{ backgroundColor: darkMode ? '#233343' : red }}
                     className="features-svg_container bg-red"
                     onMouseEnter={() => {
                       setBg(red);
@@ -127,14 +107,7 @@ const Features = () => {
                       setText(data.featureThree.text);
                     }}
                   >
-                    <img
-                      style={{
-                        filter: darkMode ? 'invert(1) saturate(0)' : 'none',
-                      }}
-                      className="features-svg"
-                      src={seo}
-                      alt="browser"
-                    />
+                    <img className="features-svg" src={seo} alt="browser" />
                   </div>
                 </AnimatedCard>
                 <h4 className="features-h4">Analytical</h4>
@@ -142,7 +115,6 @@ const Features = () => {
               <li className="features-li">
                 <AnimatedCard weight={3} clickable={false}>
                   <div
-                    style={{ backgroundColor: darkMode ? '#233343' : green }}
                     className="features-svg_container bg-green"
                     onMouseEnter={() => {
                       setBg(green);
@@ -154,14 +126,7 @@ const Features = () => {
                       setText(data.featureFour.text);
                     }}
                   >
-                    <img
-                      style={{
-                        filter: darkMode ? 'invert(1) saturate(0)' : 'none',
-                      }}
-                      className="features-svg"
-                      src={rocket}
-                      alt="browser"
-                    />
+                    <img className="features-svg" src={rocket} alt="browser" />
                   </div>
                 </AnimatedCard>
                 <h4 className="features-h4">Powerful</h4>
@@ -172,28 +137,28 @@ const Features = () => {
             <div
               className="triangle"
               style={{
-                borderBottom: `50px solid ${darkMode ? '#233343' : orange}`,
+                borderBottom: `50px solid ${orange}`,
                 opacity: isOrangeArrow ? 1 : 0,
               }}
             ></div>
             <div
               className="triangle"
               style={{
-                borderBottom: `50px solid ${darkMode ? '#233343' : blue}`,
+                borderBottom: `50px solid ${blue}`,
                 opacity: isBleuArrow ? 1 : 0,
               }}
             ></div>
             <div
               className="triangle"
               style={{
-                borderBottom: `50px solid ${darkMode ? '#233343' : red}`,
+                borderBottom: `50px solid ${red}`,
                 opacity: isRedArrow ? 1 : 0,
               }}
             ></div>
             <div
               className="triangle"
               style={{
-                borderBottom: `50px solid ${darkMode ? '#233343' : green}`,
+                borderBottom: `50px solid ${green}`,
                 opacity: isGreenArrow ? 1 : 0,
               }}
             ></div>
@@ -201,8 +166,7 @@ const Features = () => {
           <div
             className="features-info_container"
             style={{
-              backgroundColor: darkMode ? '#233343' : bg,
-              color: darkMode ? '#eef2f6' : '#101820',
+              backgroundColor: bg,
             }}
           >
             <h3 className="features-h3">{title}</h3>

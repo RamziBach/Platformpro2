@@ -1,7 +1,5 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { ScrollingProvider } from 'react-scroll-section';
-
-import { themeContext } from './context/ThemeContextProvider';
 
 import '../styles/app.css';
 
@@ -14,20 +12,11 @@ import Features from './features/Features';
 import MoreFeatures from './features/MoreFeatures';
 import Cta from './cta/Cta';
 import Footer from './footer/Footer';
-// import NavMenu from './landing/header/NavMenu';
 
 const App = () => {
-  const { darkMode } = useContext(themeContext);
   return (
     <ScrollingProvider>
-      <div
-        className="body"
-        style={{
-          backgroundColor: darkMode ? '#101820' : '#eef2f6',
-          color: darkMode ? '#eef2f6' : '#101820',
-          transition: 'background-color 1s',
-        }}
-      >
+      <div className="body">
         <Landing>
           <Header />
           <Hero />
@@ -38,7 +27,6 @@ const App = () => {
         <MoreFeatures />
         <Cta />
         <Footer />
-        {/* <NavMenu /> */}
       </div>
     </ScrollingProvider>
   );

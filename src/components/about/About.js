@@ -1,10 +1,7 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Section } from 'react-scroll-section';
 
-import { themeContext } from '../context/ThemeContextProvider';
-
 const About = () => {
-  const { darkMode } = useContext(themeContext);
   return (
     <Section id="about">
       <div className="md-container sm_section-spacing">
@@ -13,16 +10,7 @@ const About = () => {
             Platformpro is for <br /> streamers and content creators
           </h2>
           <div className="about-content-parent">
-            <div
-              className="about-content-child1"
-              style={{
-                color: darkMode ? '#eef2f6' : '#101820',
-                borderRight: darkMode
-                  ? '1px solid #eef2f6'
-                  : '1px solid #101820',
-                transition: 'all 1s',
-              }}
-            >
+            <div className="about-content-child1">
               <h4 className="about-headers">
                 Let’s face it. Just streaming isn’t enough these days.
               </h4>
@@ -44,13 +32,7 @@ const About = () => {
                 to stand out, it’s time to join them.
               </p>
             </div>
-            <div
-              className="about-content-child2"
-              style={{
-                color: darkMode ? '#eef2f6' : '#101820',
-                transition: 'all 1s',
-              }}
-            >
+            <div className="about-content-child2">
               <div>
                 <h4 className="about-headers">Can’t code? No problem.</h4>
                 <p>

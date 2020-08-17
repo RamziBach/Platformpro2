@@ -1,5 +1,4 @@
 .features-title {
-  /* text-align: center; */
   margin: 0;
   line-height: 1;
 }
@@ -46,19 +45,19 @@
 }
 
 .bg-orange {
-  background-color: #fbe0ca;
+  background-color: #ff921f;
 }
 
 .bg-green {
-  background-color: #ccfbca;
+  background-color: #00994d;
 }
 
 .bg-red {
-  background-color: #fbcaca;
+  background-color: #ff615d;
 }
 
 .bg-blue {
-  background-color: #cad9fb;
+  background-color: #059bc4;
 }
 
 .features-info_container {
